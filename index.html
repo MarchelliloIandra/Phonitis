@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phonitis</title>
+  <link rel="icon" type="image/png" href="assets/img/pfp.jpg">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#hero" class="logo">
+        <img src="assets/img/pfp.jpg" alt="Phonitis Logo" class="logo-img">
+        <span class="logo-text">Phonitis</span>
+      </a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-to-use">How to Use</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="section-box reveal">
+      <h1>Hi Indah Istiazah</h1>
+      <p>Welcome to Phonitis.</p>
+
+      <p class="justify-text">
+        On this website, you'll find out what Phonitis is, how it works, and how it was built along with a short documentation of the project.  
+        This was created with time, intention, and a little bit of courage to say something that's not always easy to say out loud.
+      </p>
+      <a href="#about" class="btn btn-spacing">About Phonitis</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="tentang" id="about">
+    <div class="section-box reveal">
+      <h1>About Phonitis</h1>
+      <br>
+      <p class="justify-text">
+        Phonitis is a voice box project powered by Arduino, created to deliver personal voice messages in a unique way.  
+        It was born out of the difficulty of expressing feelings directly and so, Phonitis came to life.
+
+        The system is built using an Arduino Uno, DFPlayer Mini, a speaker, push button, and some jumper wires. When the button is pressed, a pre-recorded voice message will play automatically.
+
+        On this site, you'll find a short usage guide and documentation that shows how this project works.
+        Every part of it was made with care, as a way to express something that words alone sometimes can't.
+      </p>
+      <a href="#how-to-use" class="btn btn-spacing">How to Use Phonitis</a>
+    </div>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section id="how-to-use">
+    <div class="section-box reveal">
+      <h2>Setup & How to Use</h2>
+
+      <p class="justify-text" style="margin-top: 20px; margin-bottom: 20px;">
+        Before using Phonitis, make sure you have these ready:
+      </p>
+
+      <ol class="justify-text" style="margin-bottom: 20px;">
+        <li><strong>The Phonitis Box</strong> (fully assembled)</li>
+        <li><strong>USB cable</strong> for the Arduino</li>
+        <li><strong>Power source</strong> (laptop or USB charger head)</li>
+      </ol>
+
+      <p class="justify-text" style="margin-top: 20px; margin-bottom: 20px;">
+        Follow these steps to use Phonitis:
+      </p>
+
+      <ol class="justify-text" style="margin-bottom: 30px;">
+        <li>Connect the USB cable from the Phonitis box to your laptop or charger.</li>
+        <li>Wait a few seconds for the system to boot up.</li>
+        <li>Press the button located on the box.</li>
+        <li>The voice message will play automatically through the speaker.</li>
+      </ol>
+
+      <a href="#contact" class="btn">
+        <i class="fa-solid fa-circle-question"></i> Need Help? Contact the Creator
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-box reveal">
+      <h2>Contact</h2>
+      <p>
+        If you experience any issues while using Phonitis, feel free to reach out to the creator through the buttons below
+      </p>
+      
+      <div style="margin-top: 20px;">
+        <a href="https://wa.link/xe027t" target="_blank" class="btn">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.instagram.com/marchellilondr/" target="_blank" class="btn">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 Phonitis. Made with love, for the one I love - Marchellilo Iandra</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (revealTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('active');
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,376 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: url('../img/bg.jpg') repeat;
+  background-size: cover; /* ATAU coba cover */
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 16px;
+  color: #ff66b2;
+  max-width: 700px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #ff66b2;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff66b2;
+}
+
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.section-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 700px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease both;
+}
+
+.section-box h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-box p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5); /* transparan biar nyatu sama bg */
+  backdrop-filter: blur(10px);
+  padding: 10px 30px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background 0.3s;
+  border-radius: 6px;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff66b2
+}
+
+/* Hamburger menu (mobile) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: #181717;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Animasi fade-in dari bawah */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.btn {
+  background: #646464;
+  color: #ff66b2;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #181717;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+.overlay h1, .overlay p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease forwards;
+}
+
+.overlay h1 {
+  animation-delay: 0.3s;
+}
+
+.overlay p {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255,255,255,0);
+  }
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.25rem;
+  gap: 10px; /* jarak antara logo dan teks */
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-family: 'Inter', sans-serif;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.6); /* transparan gelap */
+  backdrop-filter: blur(10px);   /* efek blur */
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.1); /* garis atas tipis */
+}
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer .sosmed a {
+  color: #f4f4f4;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: 600;
+}
+
+.footer .sosmed a:hover {
+  color: #ff66b2;
+  transition: 0.3s;
+}
+
+.footer .sosmed span {
+  color: #888;
+}
+
+
+.justify-text {
+  text-align: justify;
+}
+
+.btn-spacing {
+  margin-top: 20px; /* atur sesuai keinginan */
+}
+
+
+.section-box ul {
+  margin-bottom: 20px;
+}
+
+.section-box p + ol {
+  margin-top: 20px;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
